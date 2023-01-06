@@ -14,7 +14,7 @@ const Packge = () => {
         <img
           alt="pps"
           style={{
-            width: "1000px",
+            width: "100%",
             height: "auto",
             borderRadius: "25px",
             pointerEvents: "none",

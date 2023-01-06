@@ -3,21 +3,23 @@ import React from "react";
 import lineQr from "../pic/lineQr.png";
 import addFriend from "../pic/add.png";
 import ad from "../pic/รับผลิต.jpg";
+import useBreakpoint from "../hook/useBreakpoint";
 const Home = () => {
+  const breakpoint = useBreakpoint();
   return (
     <Container>
       <div style={{ wordWrap: "break-word", marginTop: "20px" }}>
-        {/* <img
+        <img
           src={ad}
           alt="รับผลิต"
           style={{
-            width: "1136px",
+            width: "100%",
             height: "auto",
             borderRadius: "25px",
             marginBottom: "20px",
             pointerEvents: "none",
           }}
-        /> */}
+        />
         <Typography variant="h5" fontWeight={800}>
           1 กำหนดรายละเอียดขององค์ประกอบขวดน้ำดื่มที่ต้องการ
         </Typography>
@@ -30,51 +32,49 @@ const Home = () => {
           2 ติดต่อเราเพื่อยื่นขอใบเสนอราคา
         </Typography>
 
-        <Stack flexDirection="row" gap={6} margin="20px 1px">
-          {/* <Stack alignItems="center">
-            <img
-              src={lineQr}
-              alt="lineQr"
-              style={{
-                borderRadius: "15px",
-                width: "250px",
-                marginBottom: "5px",
-              }}
-            />
-            <Typography
-              textAlign="center"
-              style={{ fontFamily: "IBM Plex Sans Thai", marginBottom: "10px" }}
-            >
-              Line QR-code PPS
-            </Typography>
-            <a href="https://lin.ee/L7H05yR" target="_blank">
+        <Stack>
+          <Stack flexDirection={breakpoint < 600 ? "column" : "row"} gap={6}>
+            <Stack margin={2} alignItems="center">
               <img
-                src={addFriend}
-                alt="เพิ่มเพื่อน"
-                height="36"
+                src={lineQr}
+                alt="lineQr"
                 style={{
-                  border: "0",
-                  display: "flex",
-                  justifyContent: "center",
+                  borderRadius: "15px",
+                  width: "250px",
+                  marginBottom: "10px",
                 }}
               />
-            </a>
-          </Stack> */}
+              {breakpoint < 600 && (
+                <a href="https://lin.ee/L7H05yR" target="_blank">
+                  <img
+                    src={addFriend}
+                    alt="เพิ่มเพื่อน"
+                    height="36"
+                    style={{
+                      border: "0",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  />
+                </a>
+              )}
+            </Stack>
 
-          <Box display="flex" alignItems="center">
-            <Typography variant="h6">
-              แจ้งจำนวนที่ต้องการเพื่อขอรับใบเสนอราคา
-              พร้อมแจ้งรายละเอียดขององค์ประกอบขวดน้ำดื่มที่ต้องการ (ข้อ 1)
-              พร้อมแจ้งรายละเอียดของลูกค้า
-              <br />• ชื่อผู้ติดต่อ เบอร์โทร Email <br />• ชื่อบริษัท ที่อยู่
-              เลขประจำตัวผู้เสียภาษี ที่ใช้สำหรับเปิดบิล
-              <br /> • ที่อยู่ในการจัดส่งผ่านทาง Email : ppswater54@gmail.com
-              หรือ LINE Offical PPS Water
-              <br />
-              (สามารถสอบถามข้อมูลเพิ่มเติมได้ที่ LINE Offical PPS Water และ Tel:
-              081-842-2554, 081-985-3410)
-            </Typography>
-          </Box>
+            <Box display="flex" alignItems="center">
+              <Typography variant="h6" style={{ marginBottom: "30px" }}>
+                แจ้งจำนวนที่ต้องการเพื่อขอรับใบเสนอราคา
+                พร้อมแจ้งรายละเอียดขององค์ประกอบขวดน้ำดื่มที่ต้องการ (ข้อ 1)
+                พร้อมแจ้งรายละเอียดของลูกค้า
+                <br />• ชื่อผู้ติดต่อ เบอร์โทร Email <br />• ชื่อบริษัท ที่อยู่
+                เลขประจำตัวผู้เสียภาษี ที่ใช้สำหรับเปิดบิล
+                <br /> • ที่อยู่ในการจัดส่งผ่านทาง Email : ppswater54@gmail.com
+                หรือ LINE Offical PPS Water
+                <br />
+                (สามารถสอบถามข้อมูลเพิ่มเติมได้ที่ LINE Offical PPS Water และ
+                Tel: 081-842-2554, 081-985-3410)
+              </Typography>
+            </Box>
+          </Stack>
         </Stack>
         <Typography variant="h5" fontWeight={800}>
           3 ยืนยันการสั่งซื้อ
