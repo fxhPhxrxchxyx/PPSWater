@@ -11,7 +11,6 @@ import Map from "../components/Map";
 import useBreakpoint from "../hook/useBreakpoint";
 const About = () => {
   const breakpoint = useBreakpoint();
-  console.log(breakpoint);
   return (
     <Container style={{ marginTop: "20px" }}>
       <div>
@@ -214,17 +213,21 @@ const About = () => {
             display="flex"
             gap={4}
             justifyContent="center"
+            margin="20px 0 20px  0"
             flexDirection={breakpoint < 600 ? "column" : "row"}
           >
             <div
               style={{
-                borderRadius: "15px",
                 width: breakpoint < 600 ? "100%" : "unset",
                 flex: breakpoint < 600 ? "unset" : "1",
                 height: "auto",
               }}
             >
-              <img alt="product" src={map} />
+              <img
+                alt="product"
+                src={map}
+                style={{ borderRadius: "15px", width: "100%" }}
+              />
             </div>
             <Map />
           </Box>

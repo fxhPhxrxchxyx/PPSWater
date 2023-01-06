@@ -16,7 +16,7 @@ const Footer = () => {
         <Typography
           style={{ fontFamily: "IBM Plex Sans Thai", fontWeight: "800" }}
         >
-          ห้างหุ้นส่วนจำกัด น้ำดื่มเพิ่มพูนทรัพย์ (สำนักงานใหญ่)
+          ห้างหุ้นส่วนจำกัด น้ำดื่มเพิ่มพูนทรัพย์
         </Typography>
         <Typography style={{ fontFamily: "IBM Plex Sans Thai" }}>
           Tel: 081-842-2554 , 081-985-3410

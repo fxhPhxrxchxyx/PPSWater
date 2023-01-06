@@ -16,8 +16,6 @@ class Map extends Component {
         style={{
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
-          marginBottom: "20px",
           flex: 1,
         }}
       >
