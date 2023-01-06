@@ -14,7 +14,6 @@ const NavbarItem: React.FC<Props> = ({ name, icon, path }) => {
       <div className={styles.navItems}>
         <Typography
           color="text.primary"
-          fontWeight={600}
           sx={{
             display: "flex",
             alignItems: "center",
@@ -27,7 +26,11 @@ const NavbarItem: React.FC<Props> = ({ name, icon, path }) => {
           }}
         >
           {icon}
-          <p style={{ marginTop: "4px", marginLeft: "5px" }}>{name}</p>
+          <Typography
+            style={{ marginTop: "4px", marginLeft: "5px", fontSize: "20px" }}
+          >
+            {name}
+          </Typography>
         </Typography>
       </div>
     </Link>

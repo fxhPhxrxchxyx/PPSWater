@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import { Container, Stack } from "@mui/system";
-import React from "react";
 import cap from "../pic/cap.webp";
 const Packge = () => {
   return (

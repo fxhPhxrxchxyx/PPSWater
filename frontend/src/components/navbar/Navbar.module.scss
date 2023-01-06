@@ -5,13 +5,16 @@
     rgba(153, 189, 247, 1) 0%,
     rgba(142, 142, 236, 1) 73%
   );
+  position: fixed;
   padding: 0 12px;
   min-width: 100%;
 }
 
 .wrapperDark {
   background: linear-gradient(90deg, rgb(57, 72, 97) 0%, rgb(59, 59, 102) 73%);
+  position: fixed;
   padding: 0 12px;
+  min-width: 100%;
 }
 
 .nav {
@@ -47,7 +50,7 @@
   }
 }
 .navItemsDark {
-  @media only screen and (max-width: 959px) {
+  @media only screen and (max-width: 599px) {
     background-color: rgb(57, 72, 97);
   }
 }
