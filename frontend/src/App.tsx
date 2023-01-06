@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Packge from "./pages/Packge";
 import "./styles/index.scss";
-
+import Footer from "./components/footer/Footer";
 const App = () => {
   const [dark, setDark] = useState(false);
   const theme = createTheme({
@@ -29,6 +29,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/packge" element={<Packge />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );

@@ -9,7 +9,7 @@ const Footer = () => {
       style={{
         padding: "20px",
         color: "#444",
-        height: "250px",
+        height: "300px",
       }}
     >
       <Stack alignItems="center">
