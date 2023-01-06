@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
 .wrapper {
   background: linear-gradient(
     90deg,
@@ -21,7 +22,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 599px) {
     justify-content: flex-start;
   }
 }
@@ -30,7 +31,7 @@
   display: flex;
   align-items: center;
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 599px) {
     position: fixed;
     background-color: aliceblue;
     width: 300px;
@@ -43,6 +44,11 @@
     justify-content: center;
     // display: none;
     transition: 0.5s;
+  }
+}
+.navItemsDark {
+  @media only screen and (max-width: 959px) {
+    background-color: rgb(57, 72, 97);
   }
 }
 

@@ -4,11 +4,16 @@ import styles from "./Navbar.module.scss";
 import NavbarItem from "./NavbarItem";
 import { AiFillHome, AiFillInfoCircle } from "react-icons/ai";
 import { GiHamburgerMenu, GiWaterGallon } from "react-icons/gi";
+import useBreakpoint from "../../hook/useBreakpoint";
+import logo from "../../pic/pps.png";
+import logoDark from "../../pic/ppsfordark.png";
 
 type Props = { setDark: Function };
 const Navbar: React.FC<Props> = ({ setDark }) => {
   const theme = useTheme();
   const [expanded, setExpanded] = React.useState(false);
+  const breakpoint = useBreakpoint();
+  console.log(breakpoint);
 
   return (
     <div
@@ -17,16 +22,26 @@ const Navbar: React.FC<Props> = ({ setDark }) => {
       }
     >
       <div className={styles.nav}>
-        <IconButton
-          sx={{ zIndex: 1000 }}
-          onClick={() => {
-            setExpanded((expanded) => !expanded);
-          }}
+        {breakpoint < 600 ? (
+          <IconButton
+            sx={{ zIndex: 1000 }}
+            onClick={() => {
+              setExpanded((expanded) => !expanded);
+            }}
+          >
+            <GiHamburgerMenu />
+          </IconButton>
+        ) : (
+          <img alt="logo" src={logo} style={{ height: "52px" }} />
+        )}
+
+        <Typography
+          fontWeight={700}
+          color="white"
+          fontSize={30}
+          fontFamily="'Julius Sans One'"
         >
-          <GiHamburgerMenu />
-        </IconButton>
-        <Typography fontWeight={200} color="text.primary">
-          Navbar
+          PPS Water
         </Typography>
         <div
           className={
