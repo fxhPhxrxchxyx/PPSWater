@@ -32,7 +32,11 @@ const Navbar: React.FC<Props> = ({ setDark }) => {
             <GiHamburgerMenu />
           </IconButton>
         ) : (
-          <img alt="logo" src={logo} style={{ height: "52px" }} />
+          <img
+            alt="logo"
+            src={theme.palette.mode == "light" ? logo : logoDark}
+            style={{ height: "52px" }}
+          />
         )}
 
         <Typography
@@ -45,7 +49,11 @@ const Navbar: React.FC<Props> = ({ setDark }) => {
         </Typography>
         <div
           className={
-            styles.navItems + " " + (expanded && styles.navItemsActive)
+            styles.navItems +
+            " " +
+            (expanded && styles.navItemsActive) +
+            " " +
+            (theme.palette.mode === "dark" && styles.navItemsDark)
           }
         >
           <NavbarItem
