@@ -10,11 +10,15 @@ import addFriend from "../pic/add.png";
 import Map from "../components/Map";
 import useBreakpoint from "../hook/useBreakpoint";
 import CustomHr from "../components/CustomHr";
+import ProductSwiper from "../components/productswiper/ProductSwiper";
 const About = () => {
   const breakpoint = useBreakpoint();
   const theme = useTheme();
   return (
     <Container style={{ marginTop: "20px" }}>
+      <Box sx={{ marginBottom: "20px", zIndex: "-1" }}>
+        <ProductSwiper />
+      </Box>
       <div>
         <Typography
           color="text.primary"

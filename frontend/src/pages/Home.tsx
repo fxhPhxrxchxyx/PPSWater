@@ -6,12 +6,10 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import React from "react";
 import lineQr from "../pic/lineQr.png";
 import addFriend from "../pic/add.png";
-import ad from "../pic/รับผลิต.jpg";
+import ad from "../pic/produce.jpg";
 import useBreakpoint from "../hook/useBreakpoint";
-import styles from "../styles/index.scss";
 const Home = () => {
   const breakpoint = useBreakpoint();
   return (

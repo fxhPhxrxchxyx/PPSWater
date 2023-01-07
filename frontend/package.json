@@ -17,7 +17,7 @@
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.4.1",
     "sass": "^1.55.0",
-    "swiper": "^8.4.2"
+    "swiper": "^8.4.5"
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
