@@ -14,14 +14,7 @@ const Home = () => {
   const breakpoint = useBreakpoint();
   return (
     <Container>
-      <div
-        // className={
-        //   styles.body +
-        //   " " +
-        //   (theme.palette.mode === "dark" && styles.body - dark)
-        // }
-        style={{ wordWrap: "break-word", marginTop: "20px" }}
-      >
+      <div style={{ wordWrap: "break-word", marginTop: "20px" }}>
         <img
           src={ad}
           alt="รับผลิต"
