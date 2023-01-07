@@ -14,7 +14,9 @@ const Home = () => {
   const breakpoint = useBreakpoint();
   return (
     <Container>
-      <div style={{ wordWrap: "break-word", marginTop: "20px" }}>
+      <div
+        style={{ wordWrap: "break-word", marginTop: "20px", padding: "20px 0" }}
+      >
         <img
           src={ad}
           alt="รับผลิต"

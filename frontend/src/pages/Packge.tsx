@@ -4,7 +4,7 @@ import cap from "../pic/cap.webp";
 const Packge = () => {
   return (
     <Container>
-      <Stack alignItems="center" gap={6} marginBottom="60px">
+      <Stack alignItems="center" gap={6} padding="20px 0">
         <Typography
           color="text.primary"
           variant="h4"

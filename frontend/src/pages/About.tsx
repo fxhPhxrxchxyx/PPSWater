@@ -15,7 +15,7 @@ const About = () => {
   const breakpoint = useBreakpoint();
   const theme = useTheme();
   return (
-    <Container style={{ marginTop: "20px" }}>
+    <Container style={{ marginTop: "20px", padding: "20px 0" }}>
       <Box sx={{ marginBottom: "20px", position: "relative", zIndex: "1" }}>
         <ProductSwiper />
       </Box>
@@ -196,6 +196,7 @@ const About = () => {
           textAlign="center"
           fontWeight={800}
           style={{ fontFamily: "IBM Plex Sans Thai" }}
+          marginBottom={2}
         >
           แผนที่หจก.น้ำดื่มเพื่มพูนทรัพย์
         </Typography>
@@ -203,7 +204,6 @@ const About = () => {
           <Box
             display="flex"
             gap={1}
-            margin="10px 0"
             justifyContent="center"
             flexDirection={breakpoint < 600 ? "column" : "row"}
           >
