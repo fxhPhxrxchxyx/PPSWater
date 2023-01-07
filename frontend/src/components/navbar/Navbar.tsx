@@ -13,7 +13,6 @@ const Navbar: React.FC<Props> = ({ setDark }) => {
   const theme = useTheme();
   const [expanded, setExpanded] = React.useState(false);
   const breakpoint = useBreakpoint();
-  console.log(breakpoint);
 
   return (
     <div

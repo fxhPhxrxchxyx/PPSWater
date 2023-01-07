@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
 import React from "react";
 import lineQr from "../pic/lineQr.png";
 import allproduct from "../pic/allproduct.webp";
@@ -9,12 +9,15 @@ import map from "../pic/mappps.jpg";
 import addFriend from "../pic/add.png";
 import Map from "../components/Map";
 import useBreakpoint from "../hook/useBreakpoint";
+import CustomHr from "../components/CustomHr";
 const About = () => {
   const breakpoint = useBreakpoint();
+  const theme = useTheme();
   return (
     <Container style={{ marginTop: "20px" }}>
       <div>
         <Typography
+          color="text.primary"
           variant="h4"
           textAlign="center"
           marginBottom={4}
@@ -53,6 +56,7 @@ const About = () => {
               </Stack>
               <Box display="flex" alignItems="center">
                 <Typography
+                  color="text.primary"
                   variant="h6"
                   style={{ fontFamily: "IBM Plex Sans Thai" }}
                 >
@@ -65,16 +69,9 @@ const About = () => {
             </Stack>
           </Stack>
         </Box>
-        <hr
-          style={{
-            color: "rgb(116, 114, 114)",
-            backgroundColor: "rgb(116, 114, 114)",
-            height: 0.5,
-            borderColor: "rgb(116, 114, 114)",
-            marginBottom: "60px",
-          }}
-        />
+        <CustomHr />
         <Typography
+          color="text.primary"
           variant="h4"
           textAlign="center"
           fontWeight={800}
@@ -89,16 +86,9 @@ const About = () => {
             style={{ width: "100%", height: "auto", pointerEvents: "none" }}
           />
         </Box>
-        <hr
-          style={{
-            color: "rgb(116, 114, 114)",
-            backgroundColor: "rgb(116, 114, 114)",
-            height: 0.5,
-            borderColor: "rgb(116, 114, 114)",
-            marginBottom: "60px",
-          }}
-        />
+        <CustomHr />
         <Typography
+          color="text.primary"
           variant="h4"
           textAlign="center"
           marginBottom="60px"
@@ -139,6 +129,7 @@ const About = () => {
           />
         </Stack>
         <Typography
+          color="text.primary"
           textAlign="center"
           marginBottom="60px"
           style={{ fontFamily: "IBM Plex Sans Thai" }}
@@ -149,15 +140,7 @@ const About = () => {
           มั่นใจคุณภาพ มั่นใจน้ำดื่มของเรา
         </Typography>
 
-        <hr
-          style={{
-            color: "rgb(116, 114, 114)",
-            backgroundColor: "rgb(116, 114, 114)",
-            height: 0.5,
-            borderColor: "rgb(116, 114, 114)",
-            marginBottom: "60px",
-          }}
-        />
+        <CustomHr />
         <Stack
           justifyContent="center"
           alignItems="center"
@@ -178,6 +161,7 @@ const About = () => {
           />
           <Stack maxWidth="400px">
             <Typography
+              color="text.primary"
               variant="h4"
               textAlign="center"
               fontWeight={800}
@@ -186,21 +170,24 @@ const About = () => {
               ประวัติ PPS Water
             </Typography>
             <br />
-            ห้างหุ้นส่วนจำกัด น้ำดื่มเพิ่มพูนทรัพย์ ก่อตั้งเมื่อปี พ.ศ. 2554
-            ประกอบธุรกิจนำดื่ม ผลิตโดยเครื่องจักรอัตโนมัติ ด้วยระบบ RO
-            รีเวิร์สออสโมซิส (Reverse Osmosis System) ฆ่าเชื้อด้วย UV
-            รังสีอัลตราไวโอเลต (UltraViolet) ที่ได้มาตรฐาน สะอาด ปลอดภัย
-            ทุกขั้นตอน จนถึงมือผู้บริโภค
-            มีใบอนุญาตผลิตอาหารและเลขที่อ.ย.ถูกต้องตามกฎหมาย
-            เราผลิตน้ำดื่มในขนาดต่าง ๆ โดยมีทั้งสินค้าในแบรนด์ของเรา
-            และรับจ้างผลิตให้กับลูกค้าในหลากหลายธุรกิจ มีทั้งแบบสวมสลาก
-            และสกรีนขวด ให้เลือกตามความต้องการ
-            และอำนวยความสะดวกในการขอใบอนุญาตเลขที่อ.ย.ให้กับลูกค้า
-            ที่ต้องการสร้างแบรนด์ของตัวเอง
-            <br /> ตามสโลแกน "น้ำดื่มคุณภาพ น้ำดื่มเพิ่มพูนทรัพย์"
+            <Typography color="text.primary" variant="inherit">
+              ห้างหุ้นส่วนจำกัด น้ำดื่มเพิ่มพูนทรัพย์ ก่อตั้งเมื่อปี พ.ศ. 2554
+              ประกอบธุรกิจนำดื่ม ผลิตโดยเครื่องจักรอัตโนมัติ ด้วยระบบ RO
+              รีเวิร์สออสโมซิส (Reverse Osmosis System) ฆ่าเชื้อด้วย UV
+              รังสีอัลตราไวโอเลต (UltraViolet) ที่ได้มาตรฐาน สะอาด ปลอดภัย
+              ทุกขั้นตอน จนถึงมือผู้บริโภค
+              มีใบอนุญาตผลิตอาหารและเลขที่อ.ย.ถูกต้องตามกฎหมาย
+              เราผลิตน้ำดื่มในขนาดต่าง ๆ โดยมีทั้งสินค้าในแบรนด์ของเรา
+              และรับจ้างผลิตให้กับลูกค้าในหลากหลายธุรกิจ มีทั้งแบบสวมสลาก
+              และสกรีนขวด ให้เลือกตามความต้องการ
+              และอำนวยความสะดวกในการขอใบอนุญาตเลขที่อ.ย.ให้กับลูกค้า
+              ที่ต้องการสร้างแบรนด์ของตัวเอง
+              <br /> ตามสโลแกน "น้ำดื่มคุณภาพ น้ำดื่มเพิ่มพูนทรัพย์"
+            </Typography>
           </Stack>
         </Stack>
         <Typography
+          color="text.primary"
           variant="h4"
           textAlign="center"
           fontWeight={800}
@@ -211,9 +198,9 @@ const About = () => {
         <Container>
           <Box
             display="flex"
-            gap={4}
+            gap={1}
+            margin="10px 0"
             justifyContent="center"
-            margin="20px 0 20px  0"
             flexDirection={breakpoint < 600 ? "column" : "row"}
           >
             <div
@@ -226,7 +213,10 @@ const About = () => {
               <img
                 alt="product"
                 src={map}
-                style={{ borderRadius: "15px", width: "100%" }}
+                style={{
+                  borderRadius: "15px",
+                  width: "100%",
+                }}
               />
             </div>
             <Map />

@@ -23,12 +23,22 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Navbar setDark={setDark} />
-        <Box height={64}></Box>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/packge" element={<Packge />} />
-        </Routes>
+
+        <Box
+          sx={{
+            backgroundColor:
+              theme.palette.mode === "light"
+                ? "rgb(184, 215, 255)"
+                : "rgb(74, 86, 109)",
+          }}
+        >
+          <Box height={64}></Box>
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/packge" element={<Packge />} />
+          </Routes>
+        </Box>
         <Footer />
       </BrowserRouter>
     </ThemeProvider>

@@ -1,0 +1,16 @@
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(
+    90deg,
+    rgb(158, 158, 242) 0%,
+    rgba(153, 189, 247, 1) 73%
+  );
+}
+.footerDark {
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(90deg, rgb(57, 72, 97) 0%, rgb(59, 59, 102) 73%);
+}

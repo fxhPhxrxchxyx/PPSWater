@@ -1,14 +1,29 @@
-import { Box, Container, Link, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  FormHelperText,
+  Link,
+  Stack,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import lineQr from "../pic/lineQr.png";
 import addFriend from "../pic/add.png";
 import ad from "../pic/รับผลิต.jpg";
 import useBreakpoint from "../hook/useBreakpoint";
+import styles from "../styles/index.scss";
 const Home = () => {
   const breakpoint = useBreakpoint();
   return (
     <Container>
-      <div style={{ wordWrap: "break-word", marginTop: "20px" }}>
+      <div
+        // className={
+        //   styles.body +
+        //   " " +
+        //   (theme.palette.mode === "dark" && styles.body - dark)
+        // }
+        style={{ wordWrap: "break-word", marginTop: "20px" }}
+      >
         <img
           src={ad}
           alt="รับผลิต"
@@ -20,15 +35,19 @@ const Home = () => {
             pointerEvents: "none",
           }}
         />
-        <Typography variant="h5" fontWeight={800}>
+        <Typography color="text.primary" variant="h5" fontWeight={800}>
           1 กำหนดรายละเอียดขององค์ประกอบขวดน้ำดื่มที่ต้องการ
         </Typography>
-        <Typography variant="h6" style={{ marginBottom: "20px" }}>
+        <Typography
+          color="text.primary"
+          variant="h6"
+          style={{ marginBottom: "20px" }}
+        >
           • จำนวนน้ำดื่มขั้นต่ำในการสั่งผลิต 300 โหล <br />
           • ขนาดบรรจุ 350cc, 500cc หรือ 600cc <br />• สีฝา และรูปทรงขวด
           <br /> • รูปแบบสลาก เป็นแบบสวมหรือสกรีน
         </Typography>
-        <Typography variant="h5" fontWeight={800}>
+        <Typography color="text.primary" variant="h5" fontWeight={800}>
           2 ติดต่อเราเพื่อยื่นขอใบเสนอราคา
         </Typography>
 
@@ -61,7 +80,11 @@ const Home = () => {
             </Stack>
 
             <Box display="flex" alignItems="center">
-              <Typography variant="h6" style={{ marginBottom: "30px" }}>
+              <Typography
+                color="text.primary"
+                variant="h6"
+                style={{ marginBottom: "30px" }}
+              >
                 แจ้งจำนวนที่ต้องการเพื่อขอรับใบเสนอราคา
                 พร้อมแจ้งรายละเอียดขององค์ประกอบขวดน้ำดื่มที่ต้องการ (ข้อ 1)
                 พร้อมแจ้งรายละเอียดของลูกค้า
@@ -76,20 +99,28 @@ const Home = () => {
             </Box>
           </Stack>
         </Stack>
-        <Typography variant="h5" fontWeight={800}>
+        <Typography color="text.primary" variant="h5" fontWeight={800}>
           3 ยืนยันการสั่งซื้อ
         </Typography>
-        <Typography variant="h6" style={{ marginBottom: "20px" }}>
+        <Typography
+          color="text.primary"
+          variant="h6"
+          style={{ marginBottom: "20px" }}
+        >
           เมื่อลูกค้าเซ็นยืนยันสั่งซื้อและเซ็นใบเสนอราคามาเรียบร้อย
           ลูกค้าจะต้องชำระเงินครั้งที่ 1
           เพื่อเป็นการยืนยันสั่งซื้อเฉพาะค่าบล็อกและฉลากเต็มจำนวน
           และค่าน้ำดื่มบรรจุขวด 30% และ
           จะต้องทำการชำระอีกครั้งในส่วนที่เหลือก่อนส่งมอบสินค้า
         </Typography>
-        <Typography variant="h5" fontWeight={800}>
+        <Typography color="text.primary" variant="h5" fontWeight={800}>
           4 จดเลขทะเบียน อ.ย.
         </Typography>
-        <Typography variant="h6" style={{ marginBottom: "20px" }}>
+        <Typography
+          color="text.primary"
+          variant="h6"
+          style={{ marginBottom: "20px" }}
+        >
           ลูกค้าจะต้องแจ้งรายละเอียดดังต่อไปนี้เพื่อให้ทางเราจะนำไปขอเลข อ.ย.
           กับกระทรวงสาธารสุขจังหวัดนครปฐมให้ (ฟรีไม่มีค่าใช้จ่าย) <br />• สำเนา
           หนังสือรับรองบริษัท หรือ สำเนาทะเบียนพาณิชย์ร้านฯ
@@ -97,10 +128,10 @@ const Home = () => {
           <br /> • ชื่อน้ำดื่มของลูกสะกดเป็นภาษาไทย และ/หรือ ภาษาอังกฤษ (เช่น
           น้ำดื่มตราคุณภาพดี ลูกค้าสามารถตั้งเองได้)
         </Typography>
-        <Typography variant="h5" fontWeight={800}>
+        <Typography color="text.primary" variant="h5" fontWeight={800}>
           5 การทำฉลาก
         </Typography>
-        <Typography variant="h6">
+        <Typography color="text.primary" variant="h6">
           • ลูกค้าสามารถออกแบบเองได้โดยส่งไฟล์เป็น photoshop(.ps), Adobe
           Illustrator(.Ai) , รูปภาพที่มีขนาดใหญรายละเอียดชัดเจน(.jpg or .png)
           โดย ลูกค้าจะต้องเว้นที่ไว้ 20%
@@ -112,29 +143,38 @@ const Home = () => {
           ชื่อข้อความหรือช่องทางการติดต่อของลูกค้า สามารถแนบมากับไฟล์logo
           ของลูกค้า โดยกำหนดฟอนต์ที่ต้องการมาด้วย
         </Typography>
-        <h5 style={{ marginBottom: "20px" }}>
+        <Typography
+          variant="subtitle2"
+          color="text.primary"
+          style={{ marginBottom: "30px" }}
+        >
           *หมายเหตุ ทางลูกค้าจะต้องมี Logo อยู่แล้วโดยทางเราไม่ได้วาดขึ้นใหม่
           หากให้ออกแบบ logo จะมีค่าใช้จ่ายเพิ่มเติม
-        </h5>
-        <Typography variant="h5" fontWeight={800}>
+        </Typography>
+        <Typography color="text.primary" variant="h5" fontWeight={800}>
           6 ยืนยันแบบฉลาก และ ผลิตบล็อคสี
         </Typography>
-        <Typography variant="h6" style={{ marginBottom: "20px" }}>
+        <Typography
+          color="text.primary"
+          variant="h6"
+          style={{ marginBottom: "20px" }}
+        >
           • ลูกค้าสามารถแก้แบบได้ก่อนทำการผลิตบล็อค 2 ครั้ง โดยไม่มีค่าใช้จ่าย
           โดยทางเราจะแจ้งให้ทราบล่วงหน้าว่าสามารถแก้ได้ถึงเมื่อไหร่
           <br />• หลังผลิตแล้วหากลูกค้าต้องการแก้แบบ จะมีค่าแกะบล็อคใหม่
         </Typography>
         <Typography
+          color="text.primary"
           variant="h5"
           fontWeight={800}
           style={{ marginBottom: "20px" }}
         >
           7 ผลิต และบรรจุน้ำดื่ม
         </Typography>
-        <Typography variant="h5" fontWeight={800}>
+        <Typography color="text.primary" variant="h5" fontWeight={800}>
           8 ส่งสินค้า
         </Typography>
-        <Typography variant="h6">
+        <Typography color="text.primary" variant="h6">
           • ในการสั่งครั้งแรก : ภายในระยะเวลา 30 วันหลังวันที่สั่ง <br />•
           ในการสั่งครั้งต่อ ๆ ไป : ภายในระยะเวลา 10-14 วันหลังวันที่สั่ง
           <br /> • ค่าใช้จ่ายในการส่งสินค้า
