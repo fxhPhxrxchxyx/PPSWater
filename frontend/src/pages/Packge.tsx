@@ -6,6 +6,7 @@ const Packge = () => {
     <Container>
       <Stack alignItems="center" gap={6} marginBottom="60px">
         <Typography
+          color="text.primary"
           variant="h4"
           style={{ fontFamily: "IBM Plex Sans Thai", marginTop: "20px" }}
         >
@@ -23,12 +24,14 @@ const Packge = () => {
           src={cap}
         />
         <Typography
+          color="text.primary"
           variant="h4"
           style={{ fontFamily: "IBM Plex Sans Thai", marginBottom: "30px" }}
         >
           รูปแบบขวดที่รับผลิตน้ำดื่ม OEM ในแบรนด์ของคุณทั้งแบบสวมฉลากและสกรีน
         </Typography>
         <Typography
+          color="text.primary"
           variant="h5"
           style={{
             fontFamily: "IBM Plex Sans Thai",

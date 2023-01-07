@@ -16,7 +16,7 @@ const About = () => {
   const theme = useTheme();
   return (
     <Container style={{ marginTop: "20px" }}>
-      <Box sx={{ marginBottom: "20px", zIndex: "-1" }}>
+      <Box sx={{ marginBottom: "20px", position: "relative", zIndex: "1" }}>
         <ProductSwiper />
       </Box>
       <div>
