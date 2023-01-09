@@ -10,14 +10,15 @@ import addFriend from "../pic/add.png";
 import Map from "../components/Map";
 import useBreakpoint from "../hook/useBreakpoint";
 import CustomHr from "../components/CustomHr";
-import ProductSwiper from "../components/productswiper/ProductSwiper";
+import AdSwiper from "../components/adswiper/AdSwiper";
+
 const About = () => {
   const breakpoint = useBreakpoint();
   const theme = useTheme();
   return (
     <Container style={{ marginTop: "20px", padding: "20px 0" }}>
       <Box sx={{ marginBottom: "20px", position: "relative", zIndex: "1" }}>
-        <ProductSwiper />
+        <AdSwiper />
       </Box>
       <div>
         <Typography
@@ -157,7 +158,7 @@ const About = () => {
             alt="pps place"
             style={{
               borderRadius: "15px",
-              width: "400px",
+              width: "370px",
               maxWidth: "100%",
               height: "auto",
               pointerEvents: "none",
@@ -174,7 +175,11 @@ const About = () => {
               ประวัติ PPS Water
             </Typography>
             <br />
-            <Typography color="text.primary" variant="inherit">
+            <Typography
+              color="text.primary"
+              variant="inherit"
+              sx={{ width: "100%", maxWidth: "360px" }}
+            >
               ห้างหุ้นส่วนจำกัด น้ำดื่มเพิ่มพูนทรัพย์ ก่อตั้งเมื่อปี พ.ศ. 2554
               ประกอบธุรกิจนำดื่ม ผลิตโดยเครื่องจักรอัตโนมัติ ด้วยระบบ RO
               รีเวิร์สออสโมซิส (Reverse Osmosis System) ฆ่าเชื้อด้วย UV

@@ -5,9 +5,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import About from "./pages/About";
 import Home from "./pages/Home";
-import Packge from "./pages/Packge";
+import Package from "./pages/Package";
 import "./styles/index.scss";
 import Footer from "./components/footer/Footer";
+
+import "swiper/css";
+import "swiper/css/bundle";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 const App = () => {
   const [dark, setDark] = useState(false);
   const theme = createTheme({
@@ -36,7 +42,7 @@ const App = () => {
           <Routes>
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/packge" element={<Packge />} />
+            <Route path="/package" element={<Package />} />
           </Routes>
         </Box>
         <Footer />

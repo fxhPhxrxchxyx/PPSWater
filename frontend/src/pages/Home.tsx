@@ -1,22 +1,48 @@
-import {
-  Box,
-  Container,
-  FormHelperText,
-  Link,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import lineQr from "../pic/lineQr.png";
 import addFriend from "../pic/add.png";
 import ad from "../pic/produce.jpg";
 import useBreakpoint from "../hook/useBreakpoint";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import { useState } from "react";
+import { ImageData } from "../components/productswiper/ProductData";
+import ProductCard from "../components/productswiper/ProductCard";
 const Home = () => {
+  const [swiperRef, setSwiperRef] = useState<any>(null);
   const breakpoint = useBreakpoint();
   return (
     <Container>
       <div
         style={{ wordWrap: "break-word", marginTop: "20px", padding: "20px 0" }}
       >
+        <Box sx={{ marginBottom: "40px" }}>
+          <Swiper
+            onSwiper={(swiper) => setSwiperRef(swiper)}
+            slidesPerView={breakpoint < 600 ? 1 : 3}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            centeredSlides={false}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {ImageData.map((detail) => (
+              <SwiperSlide
+                key={detail.id}
+                style={{ padding: "0 8px 32px 8px" }}
+              >
+                <ProductCard detail={detail} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Box>
         <img
           src={ad}
           alt="รับผลิต"

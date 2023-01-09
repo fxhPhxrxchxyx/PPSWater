@@ -66,9 +66,9 @@ const Navbar: React.FC<Props> = ({ setDark }) => {
             path="/about"
           />
           <NavbarItem
-            name="Packge"
+            name="Package"
             icon={<GiWaterGallon fontSize={23} />}
-            path="/packge"
+            path="/package"
           />
           <Switch
             onClick={() => {
