@@ -25,7 +25,7 @@ const ProductModal: React.FC<Props> = ({ detail }) => {
       >
         {detail.label && (
           <Button
-            onClick={() => setOpen(detail.label || "")}
+            onClick={() => setOpen(detail.label || null)}
             variant="contained"
             sx={{
               borderRadius: "10px",
@@ -39,7 +39,7 @@ const ProductModal: React.FC<Props> = ({ detail }) => {
         )}
         {detail.screen && (
           <Button
-            onClick={() => setOpen(detail.screen || "")}
+            onClick={() => setOpen(detail.screen || null)}
             variant="contained"
             sx={{
               borderRadius: "10px",
@@ -54,7 +54,6 @@ const ProductModal: React.FC<Props> = ({ detail }) => {
       </Box>
 
       <Modal
-        hideBackdrop
         open={open != null}
         onClose={handleClose}
         sx={{

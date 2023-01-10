@@ -1,8 +1,12 @@
 import { Typography } from "@mui/material";
 import { Container, Stack } from "@mui/system";
+import { useEffect } from "react";
 import ProductSwiper from "../components/productswiper/ProductSwiper";
 import cap from "../pic/cap.webp";
 const Package = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <Container>
       <Stack alignItems="center" gap={6} padding="20px 0">

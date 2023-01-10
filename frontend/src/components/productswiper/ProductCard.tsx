@@ -38,7 +38,7 @@ const ProductCard: React.FC<Props> = ({ detail }) => {
               }}
             >
               {detail.colors.map((color) => (
-                <div style={{ backgroundColor: color }}></div>
+                <div key={color} style={{ backgroundColor: color }}></div>
               ))}
             </div>
             <Box
@@ -64,6 +64,7 @@ const ProductCard: React.FC<Props> = ({ detail }) => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                margin: "15px",
               }}
             >
               <Box
@@ -112,7 +113,7 @@ const ProductCard: React.FC<Props> = ({ detail }) => {
                       variant="h6"
                       sx={{
                         fontFamily: "IBM Plex Sans Thai",
-                        maxHeight: "320px",
+                        maxHeight: "350px",
                         alignItems: "center",
                         marginBottom: "40px",
                       }}
@@ -146,28 +147,29 @@ const ProductCard: React.FC<Props> = ({ detail }) => {
                       >
                         {detail.colors.map((color) => (
                           <div
+                            key={color}
                             style={{ backgroundColor: color, margin: 15 }}
                           ></div>
                         ))}
                       </div>
-                      {detail.screen !== null ||
-                        (detail.label && (
-                          <Fragment>
-                            <Typography
-                              variant="h6"
-                              sx={{
-                                fontFamily: "IBM Plex Sans Thai",
-                                fontWeight: "bold",
-                                marginBottom: "10px",
-                              }}
-                              textAlign="center"
-                            >
-                              ตัวอย่างmock upขวด
-                            </Typography>
+                      {(detail.screen !== undefined ||
+                        detail.label !== undefined) && (
+                        <Fragment>
+                          <Typography
+                            variant="h6"
+                            sx={{
+                              fontFamily: "IBM Plex Sans Thai",
+                              fontWeight: "bold",
+                              marginBottom: "10px",
+                            }}
+                            textAlign="center"
+                          >
+                            ตัวอย่างmock upขวด
+                          </Typography>
 
-                            <ProductModal detail={detail} />
-                          </Fragment>
-                        ))}
+                          <ProductModal detail={detail} />
+                        </Fragment>
+                      )}
                     </Box>
                   </Stack>
                 </Stack>

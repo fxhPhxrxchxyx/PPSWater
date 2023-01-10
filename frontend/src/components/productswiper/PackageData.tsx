@@ -19,7 +19,8 @@ import s500เกลียว from "../../pic/bottle/500เกลียวs.webp
 import l500เกลียว from "../../pic/bottle/500เกลียวbg.webp";
 import s600 from "../../pic/bottle/600s.webp";
 import l600lon from "../../pic/bottle/600normalbg.webp";
-import s600lon from "../../pic/bottle/600s.webp";
+
+import s600lon from "../../pic/bottle/600normals.webp";
 import s600เกลียว from "../../pic/bottle/600เกลียวs.webp";
 import l600เกลียว from "../../pic/bottle/600เกลียวbg.webp";
 import { CatalogType } from "./CatalogType";

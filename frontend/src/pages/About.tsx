@@ -1,5 +1,5 @@
 import { Box, Container, Stack, Typography, useTheme } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import lineQr from "../pic/lineQr.png";
 import allproduct from "../pic/allproduct.webp";
 import ro from "../pic/ro.jpg";
@@ -15,6 +15,9 @@ import AdSwiper from "../components/adswiper/AdSwiper";
 const About = () => {
   const breakpoint = useBreakpoint();
   const theme = useTheme();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <Container style={{ marginTop: "20px", padding: "20px 0" }}>
       <Box sx={{ marginBottom: "20px", position: "relative", zIndex: "1" }}>

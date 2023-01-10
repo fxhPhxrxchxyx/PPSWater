@@ -5,12 +5,15 @@ import ad from "../pic/produce.jpg";
 import useBreakpoint from "../hook/useBreakpoint";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ImageData } from "../components/productswiper/ProductData";
 import ProductCard from "../components/productswiper/ProductCard";
 const Home = () => {
   const [swiperRef, setSwiperRef] = useState<any>(null);
   const breakpoint = useBreakpoint();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <Container>
       <div
@@ -19,7 +22,7 @@ const Home = () => {
         <Box sx={{ marginBottom: "40px" }}>
           <Swiper
             onSwiper={(swiper) => setSwiperRef(swiper)}
-            slidesPerView={breakpoint < 600 ? 1 : 3}
+            slidesPerView={breakpoint < 720 ? 1 : breakpoint < 960 ? 2 : 3}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,

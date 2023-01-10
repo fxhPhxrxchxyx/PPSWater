@@ -7,10 +7,11 @@ type Props = {
   name: string;
   icon: ReactNode;
   path: string;
+  action: (e: any) => void;
 };
-const NavbarItem: React.FC<Props> = ({ name, icon, path }) => {
+const NavbarItem: React.FC<Props> = ({ name, icon, path, action }) => {
   return (
-    <Link to={path} style={{ textDecoration: "none" }}>
+    <Link to={path} style={{ textDecoration: "none" }} onClick={action}>
       <div className={styles.navItems}>
         <Typography
           color="text.primary"

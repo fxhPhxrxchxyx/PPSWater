@@ -13,6 +13,9 @@ const Navbar: React.FC<Props> = ({ setDark }) => {
   const theme = useTheme();
   const [expanded, setExpanded] = React.useState(false);
   const breakpoint = useBreakpoint();
+  const toggleExpanded = () => {
+    setExpanded(false);
+  };
 
   return (
     <div
@@ -21,6 +24,12 @@ const Navbar: React.FC<Props> = ({ setDark }) => {
       }
     >
       <div className={styles.nav}>
+        {expanded && (
+          <div
+            style={{ position: "fixed", inset: 0, zIndex: -1 }}
+            onClick={toggleExpanded}
+          />
+        )}
         {breakpoint < 600 ? (
           <IconButton
             sx={{ zIndex: 1000 }}
@@ -37,7 +46,6 @@ const Navbar: React.FC<Props> = ({ setDark }) => {
             style={{ height: "52px" }}
           />
         )}
-
         <Typography
           fontWeight={700}
           color="white"
@@ -56,16 +64,19 @@ const Navbar: React.FC<Props> = ({ setDark }) => {
           }
         >
           <NavbarItem
+            action={toggleExpanded}
             name="Home"
             icon={<AiFillHome fontSize={23} />}
             path="/home"
           />
           <NavbarItem
+            action={toggleExpanded}
             name="About"
             icon={<AiFillInfoCircle fontSize={23} />}
             path="/about"
           />
           <NavbarItem
+            action={toggleExpanded}
             name="Package"
             icon={<GiWaterGallon fontSize={23} />}
             path="/package"

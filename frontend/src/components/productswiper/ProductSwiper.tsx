@@ -22,7 +22,7 @@ const ProductSwiper = () => {
       <Swiper
         style={{ paddingBottom: "32px" }}
         onSwiper={(swiper) => setSwiperRef(swiper)}
-        slidesPerView={breakpoint < 600 ? 1 : 3}
+        slidesPerView={breakpoint < 720 ? 1 : breakpoint < 960 ? 2 : 3}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -54,7 +54,7 @@ const ProductSwiper = () => {
       <Swiper
         style={{ paddingBottom: "32px" }}
         onSwiper={(swiper) => setSwiperRef(swiper)}
-        slidesPerView={breakpoint < 600 ? 1 : 3}
+        slidesPerView={breakpoint < 720 ? 1 : breakpoint < 960 ? 2 : 3}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -86,7 +86,7 @@ const ProductSwiper = () => {
       <Swiper
         style={{ paddingBottom: "32px" }}
         onSwiper={(swiper) => setSwiperRef(swiper)}
-        slidesPerView={breakpoint < 600 ? 1 : 3}
+        slidesPerView={breakpoint < 720 ? 1 : breakpoint < 960 ? 2 : 3}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
