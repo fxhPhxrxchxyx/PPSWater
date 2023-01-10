@@ -21,7 +21,9 @@ const ProductCard: React.FC<Props> = ({ detail }) => {
             <img src={detail.image} />
           </div>
           <div className={style.contentBx}>
-            <h2 style={{ fontFamily: "Josefin Sans" }}>{detail.title}</h2>
+            <h2 style={{ fontFamily: "IBM Plex Sans Thai", fontSize: "24px" }}>
+              {detail.title}
+            </h2>
             <div className={style.color}>
               <h3>Cover Color :</h3>
             </div>
