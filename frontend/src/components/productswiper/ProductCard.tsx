@@ -17,6 +17,7 @@ const ProductCard: React.FC<Props> = ({ detail }) => {
     <Stack width="100%" spacing={2} alignContent="center">
       <Box className={style.container}>
         <div className={style.card}>
+          <p className={style.backgroundText}>pps</p>
           <div className={style.imgBx}>
             <img src={detail.image} />
           </div>
